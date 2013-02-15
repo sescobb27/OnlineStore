@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-<h1>Store Catalog </h1>
+<h1>Store Catalog</h1>
 <% unless @products.blank? %>
 	<table class="table">
 	  <% for product in @products %>
@@ -10,7 +10,7 @@
 	    	</h2>
 		    <%= sanitize product.description %><br />
 		    <%= number_to_currency(product.price) %>
-		    <%= button_to 'Add to Cart', line_items_path( product_id: product )%>
+		    <%= button_to 'Add to Cart', line_items_path( product_id: product), remote: true %>
 	   </tr>
 	    <hr>
 	  <% end %>
