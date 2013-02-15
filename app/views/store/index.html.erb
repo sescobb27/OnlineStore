@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+<h1>Store Catalog </h1>
+<% unless @products.blank? %>
+	<table class="table">
+	  <% for product in @products %>
+	  	<tr class="product">
+		    <%= link_to image_tag(product.image_url), line_items_path(product_id: product), method: :post %>
+		    <h2>
+		    	<%= product.title %>
+	    	</h2>
+		    <%= sanitize product.description %><br />
+		    <%= number_to_currency(product.price) %>
+		    <%= button_to 'Add to Cart', line_items_path( product_id: product )%>
+	   </tr>
+	    <hr>
+	  <% end %>
+	</table>
+<% else %>
+  
+<% end %>
+

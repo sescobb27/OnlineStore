@@ -1,0 +1,107 @@
+
+h1{
+  text-align: center;
+  font-size: 2.3076923em;
+}
+
+.table{
+  margin:auto;
+}
+
+.logo{
+  background: #9c9;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 40px;
+  text-align: center;
+  color: #282;
+  border-bottom: 2px solid;
+}
+
+.main{
+  margin-left: 17em;
+  padding-top: 4ex;
+  padding-left: 2em;
+}
+
+.links{
+  float: left;
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-bottom: 1em;
+  width: 16em;
+  background: #141;
+  color: white;
+}
+html{
+  size:1em;
+}
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 0.8125em;
+  line-height: 1.125em;
+}
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 1em;
+  line-height: 1.125em;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a {
+  color: #000;
+  &:visited {
+    color: #666;
+  }
+  &:hover {
+    color: #fff;
+    background-color: #000;
+  }
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 0.625em;
+  }
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff;
+  }
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}

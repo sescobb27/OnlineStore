@@ -1,0 +1,44 @@
+// Place all the styles related to the Products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.description{
+  width: 18.75em;
+  font-family: comics-sans;
+}
+
+.table{
+  border-collapse: collapse;
+}
+
+.table{
+  font-size: 1.40em;
+}
+
+.table td{
+  border: 0.125em solid green;
+  padding-top: 0.3125em;
+  padding-bottom: 0.3125em;
+  padding-left: 0.3125em;
+  padding-right: 0.3125em;
+}
+
+.list_image{
+  box-shadow: 5px 5px 2px #888888;
+  width: 15em;
+}
+
+h3{
+  font-size: 1em;
+  font-weight: bold;
+  font-family:"Times New Roman", Times, serif;
+}
+
+.list_line_odd{
+  background-color: #9FD5D1;
+}
+
+.list_line_even{
+  background-color: #D0D0D0;
+}
+
