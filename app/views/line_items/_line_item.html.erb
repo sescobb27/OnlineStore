@@ -6,4 +6,5 @@
 		<td><%= line_item.quantity%>&times;</td>
 		<td><%= line_item.product.title %></td>
 		<td><%= number_to_currency(line_item.product.price) %></td>
+		<td><%= button_to 'Remove', decrement_line_item_path(line_item), method: :post, remote: true %></td>
 	</tr>

@@ -18,4 +18,17 @@ class Cart < ActiveRecord::Base
       item.price
     end
   end
+  
+  def decrement_line_item_quantity(line_item_id)
+    @current_item = line_items.find(line_item_id)
+    if @current_item.quantity > 1
+      @current_item.quantity -= 1
+    else
+      @current_item.destroy
+    end
+    if line_items.empty?
+      self.destroy
+    end
+    @current_item
+  end
 end
