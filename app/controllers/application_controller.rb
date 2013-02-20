@@ -10,4 +10,16 @@ class ApplicationController < ActionController::Base
     session[:cart_id] = cart.id
     cart
   end
+  
+  private
+  
+  def is_cart_line_items_empty?
+    @cart = current_cart
+    if @cart.line_items.empty?
+      redirect_to store_url, notice: "Your cart is empty"
+      true
+    else
+      false
+    end
+  end
 end
