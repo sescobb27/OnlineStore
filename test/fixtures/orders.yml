@@ -5,9 +5,10 @@ one:
   address: MyText
   email: dave@example.com
   pay_type: Check
+  total_price: 49.50
 
 two:
   name: MyString
   address: MyText
-  email: MyString
+  email: MyString@example.com
   pay_type: MyString

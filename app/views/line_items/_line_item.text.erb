@@ -1,4 +1,4 @@
-<%= sprintf("%2d x %s - %.2f\n" ,
+<%= sprintf("%2d x %s - $%.2f\n" ,
 	line_item.quantity,
 	truncate(line_item.product.title, :length => 50),
 	line_item.product.price)

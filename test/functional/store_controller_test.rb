@@ -6,8 +6,7 @@ class StoreControllerTest < ActionController::TestCase
     assert_response :success
     assert_select '.banner .links a', :minimum => 4
     assert_select 'h2' , 'Programming Ruby 1.9'
-    assert_select '.price' , /\$[,\d]+\.\d\d/
-    assert_select '.main .table .product', 3
+    assert_select '.main .table .product', 4
   end
 
 end

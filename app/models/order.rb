@@ -6,14 +6,16 @@ class Order < ActiveRecord::Base
   validates_inclusion_of :pay_type, in: PAYMENT_TYPES.values
   validates_format_of :email, with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, on: :create
   
-  attr_accessible :address, :email, :name, :pay_type
+  attr_accessible :address, :email, :name, :pay_type, :total_price
   
   has_many :line_items, dependent: :destroy
   
   def add_line_items_from_cart(cart)
+    self.total_price = 0
     cart.line_items.each do |item|
       item.cart_id = nil
       line_items << item
+      self.total_price += item.price * item.quantity
     end
   end
   
