@@ -8,6 +8,12 @@ h1{
   margin:auto;
 }
 
+.img{
+  -webkit-box-shadow: 10px 10px 5px #888888;
+  -moz-box-shadow: 10px 10px 5px #888888;
+  box-shadow: 10px 10px 5px #888888;
+}
+
 .logo{
   background: #9c9;
   padding-top: 10px;
@@ -16,6 +22,10 @@ h1{
   text-align: center;
   color: #282;
   border-bottom: 2px solid;
+}
+
+.logo .user_nav{
+  text-align: right;
 }
 
 .main{

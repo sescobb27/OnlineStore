@@ -13,3 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+$(document).ready(function(){
+	$(".img").on('mouseenter',function(){
+		$(this).css({'transform':'rotate(20deg)'});
+	}).on('mouseleave', function(){
+		$(this).css({'transform':'rotate(0deg)'})
+	});
+});

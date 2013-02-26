@@ -1,9 +1,10 @@
-$('#cart').html("<%=j render(@cart) %>");
+$(document).ready(function(){
+	$('#cart').html("<%=j render(@cart) %>");
 
-$('#current_item').css({'background-color':'#88ff88'}).
-  animate({'background-color':'#114411'}, 1000);
-  
-if ($('#cart tr').length >= 1) {
-	$('#cart').show('slow');
-}
-$('#notice').hide();
+	$('#current_item').css({'background-color':'#88ff88'});
+	  
+	if ($('#cart tr').length >= 1) {
+		$('#cart').slideDown();
+	}
+	$('#notice').hide();
+});

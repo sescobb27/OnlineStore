@@ -11,8 +11,6 @@ class ApplicationController < ActionController::Base
     cart
   end
   
-  private
-  
   def is_cart_line_items_empty?
     @cart = current_cart
     if @cart.line_items.empty?
@@ -22,4 +20,9 @@ class ApplicationController < ActionController::Base
       false
     end
   end
+  
+  def current_user
+    @current_user ||= User.find(session[:user_id]) if session[:user_id]
+  end
+  helper_method :current_user
 end

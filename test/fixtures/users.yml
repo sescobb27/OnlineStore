@@ -2,10 +2,8 @@
 
 one:
   name: MyString
-  hashed_password: MyString
-  salt: MyString
+  password_digest: MyString
 
 two:
   name: MyString
-  hashed_password: MyString
-  salt: MyString
+  password_digest: MyString

@@ -7,10 +7,21 @@
   <%= csrf_meta_tags %>
 </head>
 <body id="store">
-	<div class="logo">
-		<%= image_tag('/assets/rails.png')%>
-		<%= @page_title || "Pragmatic Bookshelf" %>
-	</div>
+	<header>
+		<div class="logo">
+			<%= image_tag('/assets/rails.png')%>
+			<%= @page_title || "Pragmatic Bookshelf" %>
+			
+			<div class="logo user_nav">
+				<% if current_user %>
+					<%= link_to "Log out", log_out_path %>
+				<% else %>
+					<%= link_to "Log in", log_in_path, class: "log_in" %>
+					<%= link_to "Sign up", sign_up_path %>
+				<% end %>
+			</div>
+		</div>
+	</header>
 	<div class="banner">
 		<% if @cart %>
 			<%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
