@@ -10,14 +10,15 @@
 	<header>
 		<div class="logo">
 			<%= image_tag('/assets/rails.png')%>
-			<%= @page_title || "Pragmatic Bookshelf" %>
+			<%= @page_title || t('.title') %>
 			
 			<div class="logo user_nav">
 				<% if current_user %>
+					<%= current_user.name %>
 					<%= link_to "Log out", log_out_path %>
-				<% else %>
-					<%= link_to "Log in", log_in_path, class: "log_in" %>
 					<%= link_to "Sign up", sign_up_path %>
+				<% else %>
+					<%= link_to t('.log_in'), log_in_path %>
 				<% end %>
 			</div>
 		</div>
@@ -29,10 +30,16 @@
 			<% end %>
 		<% end %>
 		<div class="links">
-			<a href="#">Home</a><br />
-			<a href="#">Questions</a><br />
-			<a href="#">New products</a><br />
-			<a href="#">Contact us</a><br />
+			<%= link_to t('.home'), store_url %><br/>
+			<a href="#"><%= t('.questions') %></a><br />
+			<a href="#"><%= t('.news') %></a><br />
+			<a href="#"><%= t('.contact') %></a><br />
+		
+			<% if current_user %>
+				<%= link_to "Product", products_path %><br>
+				<%= link_to "Orders", orders_path %><br>
+				<%= link_to "Users", users_path %><br>
+			<% end %>
 		</div>
 		<div class="main">
 			<%= yield %>

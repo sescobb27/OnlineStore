@@ -2,13 +2,11 @@ require 'test_helper'
 
 class SessionsControllerTest < ActionController::TestCase
   
-  setup do
-    @user = users(:one)
-  end
-  
   test "should get create" do
-    get :create, @user
-    assert_redirected_to store_path
+    user = users(:one)
+    post :create, user: {name: user.name, password: "vpmSFP41:"}
+    assert_equal user.id, session[:user_id]
+    assert_redirected_to store_url
   end
 
   test "should get destroy" do
