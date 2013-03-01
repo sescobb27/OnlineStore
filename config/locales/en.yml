@@ -2,6 +2,7 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+
   layouts:
     application:
       title: "Pragmatic Bookshelf"
@@ -10,3 +11,28 @@ en:
       news: "New products"
       contact: "Contact us"
       log_in: "Log in"
+  carts:
+    cart:
+      total: "Total"
+      your_cart: "Your Cart"
+      checkout: "Checkout"
+      empty_cart: "Empty cart"
+      are_sure: "Are you sure to delete this cart?"
+  orders:
+    form:
+      name: "Name"
+      address: "Address"
+      email: "Email"
+      pay_type: "Pay type"
+      select: "Select a payment method"
+      place_order: "Place order"
+      password: "Password"
+    new:
+      please: "Please Enter Your Details"
+  store:
+    index:
+      add: "Add to cart"
+      catalog: "Store Catalog"
+  line_items:
+    line_item:
+      remove: "remove"

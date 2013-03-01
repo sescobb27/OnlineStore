@@ -19,4 +19,9 @@ $(document).ready(function(){
 	}).on('mouseleave', function(){
 		$(this).css({'transform':'rotate(0deg)'})
 	});
+
+	$(".login").on('click', function(event){
+		event.preventDefault();
+		$('.log_form').slideToggle();
+	});
 });

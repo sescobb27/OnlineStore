@@ -11,3 +11,28 @@ es:
       news: "Nuevos productos"
       contact: "Contactenos"
       log_in: "Ingresar"
+  carts:
+    cart:
+      total: "Total"
+      your_cart: "Tu Carrito"
+      checkout: "Comprar"
+      empty_cart: "Vaciar carrito"
+      are_sure: "¿Esta seguro de eliminar el carrito?"
+  orders:
+    form:
+      name: "Nombre"
+      address: "Direccion"
+      email: "Correo"
+      pay_type: "Forma de pago"
+      select: "Seleccione una forma de pago"
+      place_order: "Confirmar orden"
+      password: "Contraseña"
+    new:
+      please: "Por favor ingrese sus detalles"
+  store:
+    index:
+      add: "Agregar al carrito"
+      catalog: "Catalogo de la tienda"
+  line_items:
+    line_item:
+      remove: "borrar"
