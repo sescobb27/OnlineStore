@@ -9,6 +9,12 @@
 <body id="store">
 	<header>
 		<div class="logo">
+			<%= form_tag store_path, class: 'locale' do %>
+				<%= select_tag 'set_locale',
+				    options_for_select(LANGUAGES, I18n.locale.to_s),
+				    onchange: 'this.form.submit()' %>
+				<%= submit_tag 'submit' %>
+			<% end %>
 			<%= image_tag('/assets/rails.png')%>
 			<%= @page_title || t('.title') %>
 			
@@ -18,23 +24,24 @@
 					<%= link_to "Log out", log_out_path %>
 					<%= link_to "Sign up", sign_up_path %>
 				<% else %>
-					<%= link_to t('.log_in'), log_in_path, class: "login"%>
-					<div class="log_form" style="display:none">
-						<br>
-						<%= form_tag sessions_path do %>
-							<div>
-								<%= label_tag :name %>
-								<%= text_field_tag :name %>
-							</div>
-							<div>
-								<%= label_tag :password %>
-								<%= password_field_tag :password %>
-							</div>
-							<div>
-								<%= submit_tag "Log in"%>
-							</div>
-						<% end %>
-					</div>
+					<%= hidden_link_if current_page?(log_in_path),
+										class: "login"%>
+						<div class="log_form" style="display:none">
+							<br>
+							<%= form_tag sessions_path do %>
+								<div>
+									<%= label_tag :name %>
+									<%= text_field_tag :name %>
+								</div>
+								<div>
+									<%= label_tag :password %>
+									<%= password_field_tag :password %>
+								</div>
+								<div>
+									<%= submit_tag "Log in"%>
+								</div>
+							<% end %>
+						</div>
 				<% end %>
 			</div>
 		</div>

@@ -36,3 +36,12 @@ en:
   line_items:
     line_item:
       remove: "remove"
+  number:
+    currency:
+      format:
+        unit: "$"
+        precision: 2
+        separator: "."
+        delimiter: ","
+        format: "%u%n"
+  thanks: "Thank you for your order"
