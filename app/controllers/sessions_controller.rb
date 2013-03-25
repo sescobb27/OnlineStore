@@ -11,8 +11,7 @@ class SessionsController < ApplicationController
         format.html { redirect_to store_path, notice: "Logged In" }
       end
     else
-      flash.now.alert = "Invalid Username or Password"
-      render "new"
+      redirect_to log_in_path, notice: "Invalid Username or Password"
     end
   end
 
